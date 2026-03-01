@@ -19,6 +19,23 @@ FastAPI Backend
     SQLite (9 tables)
 ```
 
+## Screenshots
+
+### Dashboard Overview
+![Dashboard Overview](images/dashboard.png)
+
+### Configure Targets
+![Configure Targets](images/configure_targets.png)
+
+### Evaluation Results
+![Evaluation Results](images/evaluation_result.png)
+
+### Red-Team Security Analysis
+![Red-Team Security Analysis](images/red_team_result.png)
+
+### Observability Dashboard
+![Observability Dashboard](images/observability.png)
+
 ## Key Features
 
 | Feature | Description |

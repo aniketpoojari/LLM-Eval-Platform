@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS evaluations (
     avg_score REAL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     completed_at TIMESTAMP,
-    FOREIGN KEY (target_id) REFERENCES targets(id)
+    FOREIGN KEY (target_id) REFERENCES targets(id) ON DELETE CASCADE
 );
 
 -- Evaluation results: individual query results
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS evaluation_results (
     latency_ms REAL,
     token_usage TEXT DEFAULT '{}',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (evaluation_id) REFERENCES evaluations(id)
+    FOREIGN KEY (evaluation_id) REFERENCES evaluations(id) ON DELETE CASCADE
 );
 
 -- Red team runs
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS red_team_runs (
     safety_score REAL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     completed_at TIMESTAMP,
-    FOREIGN KEY (target_id) REFERENCES targets(id)
+    FOREIGN KEY (target_id) REFERENCES targets(id) ON DELETE CASCADE
 );
 
 -- Red team results: individual attack results
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS red_team_results (
     explanation TEXT,
     latency_ms REAL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (run_id) REFERENCES red_team_runs(id)
+    FOREIGN KEY (run_id) REFERENCES red_team_runs(id) ON DELETE CASCADE
 );
 
 -- A/B test experiments
@@ -88,8 +88,8 @@ CREATE TABLE IF NOT EXISTS ab_experiments (
     statistical_significance REAL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     completed_at TIMESTAMP,
-    FOREIGN KEY (target_a_id) REFERENCES targets(id),
-    FOREIGN KEY (target_b_id) REFERENCES targets(id)
+    FOREIGN KEY (target_a_id) REFERENCES targets(id) ON DELETE CASCADE,
+    FOREIGN KEY (target_b_id) REFERENCES targets(id) ON DELETE CASCADE
 );
 
 -- A/B test results: paired comparison results
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS ab_results (
     latency_a_ms REAL,
     latency_b_ms REAL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (experiment_id) REFERENCES ab_experiments(id)
+    FOREIGN KEY (experiment_id) REFERENCES ab_experiments(id) ON DELETE CASCADE
 );
 
 -- Observability metrics
