@@ -1,5 +1,11 @@
 # LLM Evaluation & Red-Teaming Platform
 
+![Python](https://img.shields.io/badge/python-3670AD?style=for-the-badge&logo=python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+
 A general-purpose platform to evaluate, red-team, and A/B test any LLM-powered application. Features multi-dimension evaluation (LLM-as-judge), automated red-teaming with 216 adversarial attacks, A/B testing with statistical significance, and observability dashboards.
 
 ## Architecture
