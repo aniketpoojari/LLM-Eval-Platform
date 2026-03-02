@@ -66,7 +66,7 @@ FastAPI Backend
 | State | TanStack Query |
 | Statistics | scipy (paired t-test, bootstrap) |
 | Database | SQLite |
-| Deploy | Docker (multi-stage) + GitHub Actions + HF Spaces |
+| Deploy | Docker (multi-stage) |
 
 ## Quick Start
 
@@ -164,7 +164,6 @@ cd frontend && npm run build
 
 ```
 LLM-Eval-Platform/
-├── .github/workflows/ci_cd.yml
 ├── backend/
 │   ├── main.py                     # FastAPI app
 │   ├── api/                        # Route handlers
